@@ -12,7 +12,7 @@ def read_csv(path: Path):
             row = next(reader)
 
             if row['Model'].strip() == 'A':
-                return int(row['Czas'].rstrip('s'))
+                return int(row[' Czas'].rstrip('s'))
     return 0
 
 def make_csv(path: Path):
@@ -24,3 +24,4 @@ def make_csv(path: Path):
     csv_file = path / 'Dane.csv'
 
     csv_file.write_text(f'Model; Wynik; Czas;\n{model}; {score} ; {time}s;')
+

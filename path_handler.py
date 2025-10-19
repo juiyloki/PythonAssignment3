@@ -10,7 +10,7 @@ from make_read_csv import make_csv
 # `action` can be either `generate_file` or `read_file`
 #
 # example usage:
-# `process_paths(["Styczeń", "Luty"], [["wtorek", "środa"], ["piątek]],
+# `process_paths(["Styczeń", "Luty"], [["wtorek", "środa"], ["piątek"]],
 #                ["rano", "wieczorem"], read_file)`
 def process_paths(
     months: list[str],

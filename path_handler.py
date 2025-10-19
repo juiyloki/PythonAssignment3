@@ -54,10 +54,10 @@ def generate_csv_files(
 
 # Takes lists of preformatted strings containing directory names,
 # constructs paths to files in specified directories,
-# returns the sum of times in the A column from each file.
+# prints the sum of times in the A column from each file.
 #
 # example usage:
-# `A_time = read_csv_files(["styczeń", "luty"], [["wt", "śr"], ["pt"]],
+# `read_csv_files(["styczeń", "luty"], [["wt", "śr"], ["pt"]],
 #                          ["r", "w"])`
 def read_csv_files(
     months: list[str],

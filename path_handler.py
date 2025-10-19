@@ -18,7 +18,7 @@ def generate_csv_files(
 
     for i in range(len(months)):
         for day in ranges_of_days[i]:
-            time = times_of_days[i] if i < len(times_of_days) else "rano"
+            time = times_of_days[time_index] if i < len(times_of_days) else "rano"
             time_index += 1
 
             path = Path.cwd() / months[i] / day / time
@@ -43,7 +43,7 @@ def read_csv_files(
 
     for i in range(len(months)):
         for day in ranges_of_days[i]:
-            time = times_of_days[i] if i < len(times_of_days) else "rano"
+            time = times_of_days[time_index] if i < len(times_of_days) else "rano"
             time_index += 1
 
             path = Path.cwd() / months[i] / day / time

@@ -78,4 +78,4 @@ def read_csv_files(
 
             sum_of_times_in_A += read_csv(path)
 
-    print("Suma czasów Modelu A wynosi:", sum_of_times_in_A)
+    print("Suma czasów Modelu A wynosi ", sum_of_times_in_A, "s", sep="")

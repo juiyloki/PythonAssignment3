@@ -5,13 +5,13 @@ from make_read_csv import read_csv
 from make_read_csv import make_csv
 
 
-# Takes lists of formatted strings containing directory names,
+# Takes lists of preformatted strings containing directory names,
 # creates paths to directories and performs `action` on each path.
 # `action` can be either `generate_file` or `read_file`
 #
 # example usage:
 # `process_paths(["Styczeń", "Luty"], [["wtorek", "środa"], ["piątek]],
-#                ["rano", "wieczorem], read_file)`
+#                ["rano", "wieczorem"], read_file)`
 def process_paths(
     months: list[str],
     ranges_of_days: list[list[str]],

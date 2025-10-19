@@ -14,9 +14,13 @@ def generate_csv_files(
     ranges_of_days: list[list[str]],
     times_of_days: list[str],
 ) -> None:
+    time_index = 0
+
     for i in range(len(months)):
         for day in ranges_of_days[i]:
             time = times_of_days[i] if i < len(times_of_days) else "rano"
+            time_index += 1
+
             path = Path.cwd() / months[i] / day / time
 
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -35,9 +39,13 @@ def read_csv_files(
     times_of_days: list[str],
 ) -> int:
     sum_of_times_in_A = 0
+    time_index = 0
+
     for i in range(len(months)):
         for day in ranges_of_days[i]:
             time = times_of_days[i] if i < len(times_of_days) else "rano"
+            time_index += 1
+
             path = Path.cwd() / months[i] / day / time
 
             sum_of_times_in_A += read_csv(path)

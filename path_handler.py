@@ -13,12 +13,12 @@ def format_day(day: str) -> str:
         "sb": "sobota",
         "nd": "niedziela",
     }
-    return formatted_days[day]
+    return formatted_days.get(day, day)
 
 
 def format_time(time: str) -> str:
     formatted_times = {"r": "rano", "w": "wieczorem"}
-    return formatted_times[time]
+    return formatted_times.get(time, time)
 
 
 def create_path(month: str, day: str, time: str) -> Path:
